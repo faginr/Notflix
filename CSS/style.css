@@ -1,0 +1,69 @@
+/* global scope */
+:root {
+  /* create variable to be inserted elsewhere as needed */
+  --primary-color: #e50914;
+}
+
+/* target all and reset*/
+* {
+  /* this makes padding not effect width */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* controversial smoothing font */
+  --webkit-font-smoothing: antialiased;
+  background: black;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  /* rem units basically equal 1 standard html rendered unit which is 16 pixels */
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.showcase {
+  width: 100%;
+  height: 93vh;
+  position: relative;
+  /* Add img background, no weird repeat edges, center XY, and cover the space */
+  background: url("../img/netflix-background.jpg") no-repeat center center/cover;
+}
+
+.showcase-top {
+  position: relative;
+  height: 90px;
+}
+
+.showcase-top img {
+  width: 300px;
+  /* position inside parent relative .showcase-top */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* scoot back logo into middle by subtracting logo size from the left value adjustment */
+  transform: translate(-50%, -50%);
+}
